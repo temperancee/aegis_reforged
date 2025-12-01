@@ -6,6 +6,7 @@
 
 
 import 'package:aegis_reforged/data/repositories/image_repository.dart';
+import 'package:aegis_reforged/data/services/api_key.dart';
 import 'package:aegis_reforged/data/services/gemini_service.dart';
 import 'package:aegis_reforged/ui/photo_upload/view_model/photo_upload_view_model.dart';
 import 'package:aegis_reforged/ui/photo_upload/widgets/photo_upload_screen.dart';
@@ -18,7 +19,6 @@ void main() {
   // Since this is only used in the photoupload page, perhaps it should be part 
   // of the related viewmodel (or, perhaps more likely, part of the gemini/photo
   // repository?)
-  var apiKey = "AIzaSyA-Gc4ActuuidnfBbPm1VIG4U8TTY0JSso";
   Gemini.init(apiKey: apiKey);
 
   runApp(const MyApp());
