@@ -10,7 +10,7 @@ import 'package:flutter_gemini/flutter_gemini.dart';
 class GeminiService {
   final Gemini _client = Gemini.instance;
 
-  final String prompt = "For each image passed, please provide a short description (variable name 'desc'), 5 one-word tags (variable name 'tags'), and a suitable filename (variable name 'filename'), which should be two words formatted in snake_case. Please also assign each image a number (variable name 'id'), based on the order in which they are passed (so the first image is image 1, the second is 2, and so on). Please return this data in JSON format.";
+  final String prompt = "For the attached image, please provide a short description (variable name 'desc'), 5 one-word tags (variable name 'tags'), and a suitable filename (variable name 'filename'), which should be two or three words formatted in snake_case. Please return this data in JSON format, but do not wrap the response in markdown code blocks.";
 
   Result<Future<Candidates?>> generateImageMetadata(Uint8List imgBytes) {
     try {
